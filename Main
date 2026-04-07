@@ -1,1 +1,27 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
 
+
+    public class Main {
+
+        public static void main(String[] args){
+
+            Scanner input = new Scanner(System.in);
+
+            ArrayList<ItemManager.MenuItem> menuList = new ArrayList<>();
+            HashSet<ItemManager.MenuItem> orderSet = new HashSet<>();
+
+
+            // ini bagian Data Menu nya
+
+            menuList.add(new ItemManager.MenuItem("Fried Rice","Food",15000));
+            menuList.add(new ItemManager.MenuItem("Mie Ayam","Food",12000));
+            menuList.add(new ItemManager.MenuItem("Ice Tea","Drink",5000));
+            menuList.add(new ItemManager.MenuItem("Coffee","Drink",8000));
+
+            int choice = 0;
+
+            while(choice != 4){
+
+                ItemManager.showMenu(menuList);
