@@ -78,3 +78,14 @@ public class ItemManager {
 
         System.out.println("==================");
     }
+
+ public static void addItem(HashSet<MenuItem> orderSet, MenuItem item){
+
+        if(orderSet.add(item)){
+            System.out.println(item.getName() + " successfully added");
+        }
+        else{
+            System.out.println("Item already exists in order");
+        }
+
+    }
