@@ -25,3 +25,31 @@ import java.util.Scanner;
             while(choice != 4){
 
                 ItemManager.showMenu(menuList);
+
+            while(true){
+
+                System.out.println("1. Add Item");
+                System.out.println("2. Remove Item");
+                System.out.println("3. Checkout");
+                System.out.println("4. Exit");
+
+                System.out.print("Choose: ");
+
+                try{
+
+                    choice = input.nextInt();
+
+                    if(choice < 1 || choice > 4){
+                        System.out.println("Please input valid number (1-4)");
+                        continue;
+                    }
+
+                    break;
+                }
+                catch(Exception e){
+
+                    System.out.println("Input must be number!");
+                    input.nextLine();
+                }
+
+            }
