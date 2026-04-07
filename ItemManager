@@ -37,3 +37,44 @@ public class ItemManager {
         public double getPrice(){
             return price;
         }
+ @Override
+        public boolean equals(Object obj){
+
+            if(this == obj) return true;
+
+            if(obj == null || getClass() != obj.getClass()) return false;
+
+            MenuItem item = (MenuItem) obj;
+
+            return name.equals(item.name);
+        }
+
+        @Override
+        public int hashCode(){
+            return name.hashCode();
+        }
+    }
+
+ 
+    public static void showMenu(ArrayList<MenuItem> menuList){
+
+        System.out.println("====== MENU ======");
+
+        int i = 1;
+
+        for(MenuItem item : menuList){
+
+            System.out.println(
+                    i + ". " +
+                            item.getName() +
+                            " | " +
+                            item.getCategory() +
+                            " | Rp " +
+                            item.getPrice()
+            );
+
+            i++;
+        }
+
+        System.out.println("==================");
+    }
